@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+:root{
+--main-background: hsl(233, 47%, 7%);
+--card-background: hsl(244, 38%, 16%);
+--accent: hsl(277, 64%, 61%);
+
+
+
+--main-heading: hsl(0, 0%, 100%);
+--main-paragraph: hsla(0, 0%, 100%, 0.75);
+--stats-heading: hsla(0, 0%, 100%, 0.6);
+}
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+img{
+    max-width: 100%;
+}
+ul{
+    list-style-type: none;
+
+}
+body{
+    font-family: "Lexend Deca", sans-serif;
+    background-color: var(--main-background);
+
+
+}
+.container{
+    background-color: var(--card-background);
+    margin: 50px 20px;
+    padding: 0 0 20px ;
+    border-radius: 10px;
+    text-align: center;
+}
+.container .picture{
+    background: url("image-header-mobile.jpg ")
+    no-repeat center/cover;
+    height: 400px;
+    border-radius: 10px 10px 0 0;
+}
+.container .picture .overlay{
+    background-color:hsl(277, 64%, 61%, 0.4);
+    height: 400px;
+    border-radius: 10px 10px 0 0;
+
+}
+p{
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.container .card h1{
+    color: var(--main-heading);
+    margin: 2.5rem 1rem 1rem 1rem;
+}
+.container .card p{
+    color: var(--main-paragraph);
+    margin: 1rem ;
+}
+.container .card ul{
+    color: var(--stats-heading);
+}
+.container .card ul li{
+    margin-bottom: 1.5rem;
+
+}
+.container .card ul span{
+display: block;
+color: var(--main-heading);
+}
+.insights{
+    color: var(--accent);
+}
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (min-width: 760px){
+    .container{
+       display: flex;
+       flex-direction: row-reverse;
+       align-items: center;
+       justify-content: center;
+       padding: 0;
+    }
+    .container .picture {
+        background: url(image-header-desktop.jpg) no repeat center/cover;
+        /* height: auto; */
+        min-width: 50%;
+        border-radius: 0 10px 10px 05;
+    }
+    .container .picture .overlay{
+        /* height: auto; */
+        border-radius: 0 10px 10px 0;
+
+    }
+    .container .card h1{
+    text-align: left;
+    margin-left: 4rem;
+    
+    }
+    .container .card p{
+        text-align: left;
+    margin-left: 4rem;
+    
+    }
+    .container .card ul{
+        text-align: left;
+        margin-left: 4rem;
+        display: flex;
+    }
+    .container .card ul li{
+        margin-right: 2rem;
+    }
+    
+}
+@media (min-width: 992px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+
+    }
+    .container .card ul li{
+        margin-right: 4rem;
+    }
+    .container .card h1{
+        text-align: left;
+        margin-left: 4rem;
+        padding-right: 4rem;
+        
+        }
+        .container .card p{
+            text-align: left;
+        margin-left: 4rem;
+        padding-right: 5rem;}
+}
